@@ -22,7 +22,7 @@
 
 header {
   grid-area: header;
-  background-image: url("./img/vocalist_header.jpg");
+  background-image: url("../img/vocalist_header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -244,7 +244,7 @@ footer p {
 
 #logo2 {
   margin-left: 0px;
-  color: #ea1538;
+  color: #c10000;
 }
 
 #p1__header {
@@ -496,7 +496,7 @@ footer p {
   header {
     grid-area: header;
     width: 320px;
-    background-image: url("./img/vocalist header.jpg");
+    background-image: url("../img/vocalist header.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -912,7 +912,7 @@ footer p {
 .backgroud_ticket {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-image: url("./img/estadio.jpg");
+  background-image: url("../img/estadio.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
