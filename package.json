@@ -1,0 +1,26 @@
+{
+  "name": "entrega_tercera",
+  "version": "1.0.0",
+  "description": "Proyecto con sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SalvadorGragirena/Entrega_Tercera.git"
+  },
+  "keywords": [
+    "sass"
+  ],
+  "author": "Salvador",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SalvadorGragirena/Entrega_Tercera/issues"
+  },
+  "homepage": "https://github.com/SalvadorGragirena/Entrega_Tercera#readme",
+  "dependencies": {
+    "nodemon": "^2.0.20",
+    "sass": "^1.55.0"
+  }
+}
