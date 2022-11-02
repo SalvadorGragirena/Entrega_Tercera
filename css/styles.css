@@ -27,6 +27,7 @@ header {
   background-size: cover;
   background-position: center;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
 }
 
@@ -62,6 +63,7 @@ header {
 #menu {
   grid-area: menu;
   display: flex;
+  flex-direction: row;
   justify-content: center;
 }
 
@@ -76,6 +78,7 @@ header {
 
 #nav_menu {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-content: center;
 }
@@ -120,6 +123,7 @@ header {
 
 #artist div {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -174,6 +178,7 @@ header {
 
 #event div {
   display: flex;
+  flex-direction: row;
   justify-content: center;
 }
 
@@ -190,7 +195,8 @@ header {
   margin: 0px;
   padding: 0px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #section_dos_event a {
@@ -262,6 +268,7 @@ footer p {
 
 .sectionheader {
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   width: 420px;
 }
@@ -321,6 +328,7 @@ footer p {
 
 .buttons {
   display: flex;
+  flex-direction: row;
   justify-content: end;
   align-items: center;
   margin-right: 80px;
@@ -347,8 +355,8 @@ footer p {
 #block1 {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   background-image: linear-gradient(rgba(0, 90, 162, 0.88), black);
   background-attachment: fixed;
 }
@@ -496,7 +504,7 @@ footer p {
   header {
     grid-area: header;
     width: 320px;
-    background-image: url("../img/vocalist header.jpg");
+    background-image: url("../img/vocalist_header.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -551,6 +559,7 @@ footer p {
   }
   #publicidad section {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
   #publicidad section a {
@@ -614,8 +623,8 @@ footer p {
   #block1 {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     background-image: linear-gradient(rgba(0, 90, 162, 0.88), black);
     background-attachment: fixed;
   }
@@ -727,6 +736,7 @@ footer p {
   }
   #artist div {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
   }
@@ -795,18 +805,24 @@ footer p {
     padding-left: 10px;
     padding-right: 0px;
     margin-bottom: 10px;
+    margin-right: 0px;
     height: 200px;
     width: 250px;
   }
   #event div {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
   }
   #event section button {
-    margin-top: 157px;
+    margin: 0px;
   }
   #event section p {
     display: none;
+  }
+  #section_dos_event a {
+    font-size: 13px;
   }
   footer {
     grid-area: footer;
@@ -834,12 +850,13 @@ footer p {
 
 #logo2_ticket {
   margin-left: 0px;
-  color: #ea1538;
+  color: #c10000;
 }
 
 .centralizador {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -858,11 +875,13 @@ footer p {
 
 .gunsimg_ticket {
   display: flex;
+  flex-direction: row;
   justify-content: center;
 }
 
 .footer_ticket {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   height: 90px;
   background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
@@ -878,14 +897,21 @@ footer p {
 
 .header_ticket {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   padding-top: 20px;
 }
 
 .header_redes_ticket {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   padding-top: 20px;
+  margin: 0px;
+}
+
+.header_redes_ticket ul {
+  margin-right: 20px;
 }
 
 .header_redes_ticket li {
@@ -942,6 +968,7 @@ footer p {
   background-image: linear-gradient(rgba(129, 129, 129, 0.54), rgba(255, 255, 255, 0.556));
   background-attachment: fixed;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding-top: 5px;
@@ -950,6 +977,7 @@ footer p {
 @media all and (max-width: 720px) {
   .gunsimg_ticket {
     display: flex;
+    flex-direction: row;
     justify-content: center;
   }
   .gunsimg_ticket img {
@@ -969,6 +997,7 @@ footer p {
   }
   .header_redes_ticket {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     padding-top: 20px;
     padding-left: 50px;

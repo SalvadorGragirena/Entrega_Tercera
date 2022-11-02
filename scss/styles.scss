@@ -3,6 +3,27 @@
     box-sizing: border-box;
 }
 
+@mixin display-flex-full($tipo,$direccion, $justif, $align) {
+    display: $tipo;
+    flex-direction: $direccion;
+    justify-content: $justif;
+    align-content: $align;
+}
+@mixin display-flex-vertical($tipo,$direccion, $align) {
+    display: $tipo;
+    flex-direction: $direccion;
+    align-content: $align;
+}
+@mixin display-flex-horizontal($tipo,$direccion, $justif) {
+    display: $tipo;
+    flex-direction: $direccion;
+    justify-content: $justif;
+}
+
+
+$color-red: #c10000;
+
+
 #grid__container{
     display: grid;
     height: 100vh;
@@ -37,8 +58,7 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: space-around;
+    @include display-flex-horizontal(flex, row, space-around);
 }
 
 #middle__div__header{
@@ -70,8 +90,7 @@ header{
  }
 #menu{
     grid-area: menu;
-    display: flex;
-    justify-content: center;   
+    @include display-flex-horizontal(flex, row, center);
 }
 #menu ul{
     background-color: rgb(197, 197, 185);
@@ -84,10 +103,7 @@ header{
 
 }
 #nav_menu{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    
+    @include display-flex-full(flex, row, center, center);
 }
 #nav_menu li{
     list-style-type: none;
@@ -109,9 +125,7 @@ header{
 
 #artist{
     grid-area: artist;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    @include display-flex-horizontal(flex, column, space-around);
     background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
     background-attachment: fixed;
     padding: 10px;
@@ -124,8 +138,7 @@ header{
     padding: 10px;
 }
 #artist div{
-    display: flex;
-    justify-content: space-between;
+    @include display-flex-horizontal(flex, row, space-between);
     align-items: center;
 }
 
@@ -171,8 +184,7 @@ header{
     padding-bottom: 5px;
 }
 #event div{
-    display: flex;
-    justify-content: center;
+    @include display-flex-horizontal(flex, row, center);
 }
 #event section{  
     margin-left: 10px;
@@ -185,8 +197,7 @@ header{
 #section_dos_event{
     margin: 0px;
     padding: 0px;
-    display: flex;
-    justify-content: space-between;
+    @include display-flex-horizontal(flex, column, center);
 }
 #section_dos_event a{
     text-decoration: none;
@@ -200,9 +211,7 @@ header{
 
 #publicidad{
     grid-area: publicidad;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
+    @include display-flex-horizontal(flex, column, start);
     align-items: center;
 }
 #publicidad img{
@@ -210,9 +219,7 @@ header{
     width: 50%;
 }
 #publicidad section{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
+    @include display-flex-horizontal(flex, column, start);
     align-items: center;
     text-align: center;
 }
@@ -235,7 +242,7 @@ footer p{
 
 #logo2{
     margin-left: 0px;
-    color: #c10000;
+    color: $color-red;//#c10000;
 }
 
 #p1__header{
@@ -252,10 +259,8 @@ footer p{
 }
 
 .sectionheader{
-    display: flex;
-    justify-content:space-evenly;
+    @include display-flex-horizontal(flex, row, space-evenly);
     width: 420px;
-
 }
 
 .sectionheader a{
@@ -312,8 +317,7 @@ footer p{
 }
 
 .buttons {
-    display: flex;
-    justify-content: end;
+    @include display-flex-horizontal(flex, row, end);
     align-items: center;
     margin-right: 80px;
 }
@@ -338,10 +342,8 @@ footer p{
 
 
 #block1{
-    display: flex;
-    flex-direction: column;
+    @include display-flex-horizontal(flex, column, center);
     align-items: center;
-    justify-content: center;
     background-image: linear-gradient(rgba(0, 90, 162, 0.88), black);
     background-attachment: fixed;
 }
@@ -367,9 +369,7 @@ footer p{
 
 
 #block2{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include display-flex-horizontal(flex, column, center);
     align-items: center;
     background-image: linear-gradient(rgba(132, 132, 132, 0.88), black);
     background-attachment: fixed;
@@ -386,9 +386,7 @@ footer p{
     transition: 0.2s;
 }
 #block3{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include display-flex-horizontal(flex, column, center);
     align-items: center;
     background-image: linear-gradient(rgba(132, 132, 132, 0.88), black);
     background-attachment: fixed;
@@ -405,9 +403,7 @@ footer p{
     transition: 0.2s;
 }
 #block4{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include display-flex-horizontal(flex, column, center);
     align-items: center;
     background-image: linear-gradient(rgba(132, 132, 132, 0.88), black);
     background-attachment: fixed;
@@ -485,13 +481,11 @@ footer p{
     header{
         grid-area: header;
         width: 320px;
-        background-image: url("../img/vocalist\ header.jpg");
+        background-image: url("../img/vocalist_header.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        @include display-flex-horizontal(flex, column, space-around);
     }
     
     #middle__div__header{
@@ -519,10 +513,8 @@ footer p{
 
     .registration-form{
         width: 320px;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: space-between;
-        align-items: center;
+        @include display-flex-horizontal(flex, column-reverse, space-between);
+        align-items: center; 
     }
     .registration-form form input,p{
         height: 20px;
@@ -531,9 +523,7 @@ footer p{
 
     #publicidad{
         grid-area: publicidad;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        @include display-flex-horizontal(flex, row, space-between);
         align-items: flex-start;
     }
     #publicidad h2{
@@ -544,8 +534,7 @@ footer p{
         width: 30px;
     }
     #publicidad section{
-        display: flex;
-        justify-content: space-between;
+        @include display-flex-horizontal(flex, row, space-between);
     }
     #publicidad section a{
         font-size: 10px;
@@ -555,9 +544,7 @@ footer p{
         grid-area: menu;
         margin: 0px;
         padding: 0px;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content:right;
+        @include display-flex-horizontal(flex, row-reverse, right);
 
     }
     #menu nav{
@@ -579,9 +566,7 @@ footer p{
         margin: 0px;
         padding: 0px;
         width: 320px;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content:center;
+        @include display-flex-horizontal(flex, row-reverse, center);
     }
  
     #nav_menu li{
@@ -616,10 +601,8 @@ footer p{
         /*grid-column: span 2;*/
     }
     #block1{
-        display: flex;
-        flex-direction: column;
+        @include display-flex-horizontal(flex, column, center);
         align-items: center;
-        justify-content: center;
         background-image: linear-gradient(rgba(0, 90, 162, 0.88), black);
         background-attachment: fixed;
     }
@@ -714,9 +697,7 @@ footer p{
     
     #artist{
         grid-area: artist;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        @include display-flex-horizontal(flex, column, space-around);
         background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
         background-attachment: fixed;
         padding: 10px;
@@ -736,8 +717,7 @@ footer p{
     }
    
     #artist div{
-        display: flex;
-        justify-content: space-between;
+        @include display-flex-horizontal(flex, row, space-between);
         align-items: flex-start;
     }
     #artist div img{
@@ -812,20 +792,27 @@ footer p{
         padding-left: 10px;
         padding-right: 0px;
         margin-bottom: 10px;
+        margin-right: 0px;
         height: 200px;
         width: 250px;
     }
     #event div{
-        display: flex;
-        justify-content: center;
+        @include display-flex-horizontal(flex, row, space-around);
+        align-items: flex-start;
     }
 
     #event section button{
-        margin-top: 157px;
+        margin:0px
     }
     #event section p{
         display: none;
     }
+
+    #section_dos_event a{
+        font-size: 13px;
+    }
+   
+    
     
     footer{
         grid-area: footer;
@@ -856,12 +843,11 @@ footer p{
 
 #logo2_ticket{
     margin-left: 0px;
-    color: #ea1538;
+    color: $color-red;
 }
 
 .centralizador{
-    display: flex;
-    flex-direction: column;
+    @include display-flex-horizontal(flex, column, center);
     align-items: center;
 }
 
@@ -879,13 +865,11 @@ footer p{
 }
 
 .gunsimg_ticket{
-    display: flex;
-    justify-content: center;
+    @include display-flex-horizontal(flex, row, center);
 }
 
 .footer_ticket{
-    display: flex;
-    justify-content: center;
+    @include display-flex-horizontal(flex, row, center);
     height: 90px;
     background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
     background-attachment: fixed;
@@ -898,15 +882,17 @@ footer p{
 }
 
 .header_ticket{
-    display: flex;
-    justify-content: center;
+    @include display-flex-horizontal(flex, row, center);
     padding-top: 20px;
 }
 
 .header_redes_ticket{
-    display: flex;
-    justify-content: space-between;
+    @include display-flex-horizontal(flex, row, space-between);
     padding-top: 20px;
+    margin: 0px;
+}
+.header_redes_ticket ul{
+    margin-right: 20px; 
 }
 .header_redes_ticket li{
     list-style-type: none;  
@@ -961,8 +947,7 @@ footer p{
 #teloneros_h5_ticket{
     background-image: linear-gradient(rgba(129, 129, 129, 0.54), rgba(255, 255, 255, 0.556));
     background-attachment: fixed;
-    display: flex;
-    justify-content: center;
+    @include display-flex-horizontal(flex, row, center);
     align-items: center;
     padding-top: 5px;
 }
@@ -970,8 +955,7 @@ footer p{
 
 @media all and (max-width: 720px) {
 .gunsimg_ticket{
-        display: flex;
-        justify-content: center;
+    @include display-flex-horizontal(flex, row, center);
 }
 
 .gunsimg_ticket img{
@@ -991,8 +975,7 @@ footer p{
     color: rgb(77, 70, 70);
 }
 .header_redes_ticket{
-    display: flex;
-    justify-content: space-between;
+    @include display-flex-horizontal(flex, row, space-between);
     padding-top: 20px;
     padding-left: 50px;
 }
