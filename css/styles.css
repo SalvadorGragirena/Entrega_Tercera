@@ -53,11 +53,11 @@ header {
 
 #middle__section__header section a {
   text-decoration: none;
-  color: burlywood;
+  color: #c8c8c8;
 }
 
 #middle__section__header p {
-  color: cornsilk;
+  color: #c8c8c8;
 }
 
 #menu {
@@ -68,7 +68,7 @@ header {
 }
 
 #menu ul {
-  background-color: rgb(197, 197, 185);
+  background-color: rgb(198, 198, 198);
   width: 50%;
   margin-left: 400px;
   margin-right: 400px;
@@ -94,7 +94,7 @@ header {
 }
 
 #nav_menu li a:hover {
-  color: #ffffff;
+  color: #c8c8c8;
   transition: 0.2s;
 }
 
@@ -206,7 +206,7 @@ header {
 }
 
 #section_dos_event a:hover {
-  color: #c40000;
+  color: #c10000;
   transition: 0.5s;
 }
 
@@ -256,14 +256,14 @@ footer p {
 #p1__header {
   font-family: "Audiowide", sans-serif;
   font-weight: lighter;
-  color: burlywood;
+  color: #c8c8c8;
 }
 
 #p2__header {
   font-family: "Audiowide", sans-serif;
   font-weight: bold;
   font-size: x-large;
-  color: cornsilk;
+  color: rgb(223, 223, 223);
 }
 
 .sectionheader {
@@ -275,11 +275,11 @@ footer p {
 
 .sectionheader a {
   text-decoration: none;
-  color: gainsboro;
+  color: #c8c8c8;
 }
 
 .sectionheader p {
-  color: burlywood;
+  color: #c8c8c8;
   font-size: 15px;
   font-family: sans-serif;
 }
@@ -288,7 +288,7 @@ footer p {
   /*Ajustar Posicion*/
   width: 200px;
   margin-top: 25px;
-  color: #bab5b6;
+  color: #c8c8c8;
 }
 
 .registration-form h2 {
@@ -319,7 +319,7 @@ footer p {
   width: 30%;
   border: 0px;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #c8c8c8;
 }
 
 .registration-form button:hover {
@@ -342,7 +342,7 @@ footer p {
   line-height: 30px;
   text-align: center;
   background: #314652;
-  color: #f1f1f1;
+  color: #c8c8c8;
   border-radius: 50%;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   transition: all 0.4s ease-in-out;
@@ -382,7 +382,7 @@ footer p {
 }
 
 #block1 p {
-  color: rgb(183, 183, 183);
+  color: rgb(198, 198, 198);
 }
 
 #block2 {
@@ -467,7 +467,7 @@ footer p {
 
 .search button {
   background-color: #0074D9;
-  color: #f2f2f2;
+  color: #c8c8c8;
   padding: 5px 10px;
   margin-right: 16px;
   font-size: 12px;
@@ -606,7 +606,7 @@ footer p {
     color: rgb(62, 59, 59);
   }
   #nav_menu li a:hover {
-    color: #ffffff;
+    color: #c8c8c8;
   }
   .buttons {
     display: none;
@@ -710,7 +710,7 @@ footer p {
     transition: 0.2s;
   }
   #block4 p {
-    color: rgb(183, 183, 183);
+    color: rgb(198, 198, 198);
     text-align: center;
   }
   #artist {
@@ -755,7 +755,7 @@ footer p {
   }
   .search button {
     background-color: rgba(165, 42, 42, 0);
-    color: #f2f2f2;
+    color: #c8c8c8;
     padding: 0px;
     margin-right: 0px;
     font-size: 5px;
@@ -838,7 +838,7 @@ footer p {
 }
 /* Estilos para pagina ticket*/
 .pruebacolor {
-  background-color: #f2f2f2;
+  background-color: #c8c8c8;
   border: solid black;
 }
 

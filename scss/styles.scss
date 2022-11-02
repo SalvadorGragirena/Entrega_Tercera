@@ -1,3 +1,9 @@
+//Colores
+$color-red: #c10000;
+$color-white-dark: #c8c8c8;
+$color-gris-rgb: rgb(198, 198, 198);
+$color-white-hover: rgb(223, 223, 223);
+
 *{
     margin: 0px;
     box-sizing: border-box;
@@ -21,7 +27,7 @@
 }
 
 
-$color-red: #c10000;
+
 
 
 #grid__container{
@@ -83,17 +89,17 @@ header{
 }
 #middle__section__header section a{
     text-decoration: none;
-    color: burlywood;
+    color: $color-white-dark;
  }
  #middle__section__header p{
-    color: cornsilk;
+    color: $color-white-dark;
  }
 #menu{
     grid-area: menu;
     @include display-flex-horizontal(flex, row, center);
 }
 #menu ul{
-    background-color: rgb(197, 197, 185);
+    background-color: $color-gris-rgb;
     width: 50%;
     margin-left: 400px;
     margin-right: 400px;
@@ -114,7 +120,7 @@ header{
     color: rgb(62, 59, 59);
 }
 #nav_menu li a:hover {
-    color: #ffffff;
+    color: $color-white-dark;
     transition: 0.2s;
 }
 
@@ -131,7 +137,7 @@ header{
     padding: 10px;
 }
 #artist h2{
-    color: rgb(198, 198, 198);
+    color: $color-gris-rgb;
     margin: 0px;
 }
 #artist p{
@@ -148,7 +154,7 @@ header{
     background-attachment: fixed;
 }
 #lastest_videos h2{
-    color: rgb(198, 198, 198);
+    color: $color-gris-rgb;
     margin: 10px;
 }
 #lastest_videos iframe{
@@ -166,7 +172,7 @@ header{
 #listen_radio h2{
     margin: 10px;
     margin-bottom: 0px;
-    color: rgb(198, 198, 198);
+    color: $color-gris-rgb;
 }
 
 #event{
@@ -177,7 +183,7 @@ header{
 #event h2{
     margin: 10px;
     margin-bottom: 0px;
-    color: rgb(198, 198, 198);
+    color: $color-gris-rgb;
 }
 #event img{
     padding-left: 305px;
@@ -201,11 +207,11 @@ header{
 }
 #section_dos_event a{
     text-decoration: none;
-    color: #c8c8c8;
+    color: $color-white-dark;
     font-size: 18px;
 }
 #section_dos_event a:hover{
-    color: #c40000;
+    color: $color-red;
     transition: 0.5s;
 }
 
@@ -248,14 +254,14 @@ footer p{
 #p1__header{
     font-family: "Audiowide", sans-serif;
     font-weight: lighter;
-    color: burlywood;
+    color: $color-white-dark;
 }
 
 #p2__header{
     font-family: "Audiowide", sans-serif;
     font-weight: bold;
     font-size: x-large;
-    color: cornsilk;
+    color: rgb(223, 223, 223);
 }
 
 .sectionheader{
@@ -265,11 +271,11 @@ footer p{
 
 .sectionheader a{
     text-decoration: none;
-    color: gainsboro;
+    color: $color-white-dark;
 }
 
 .sectionheader p{
-    color: burlywood;
+    color: $color-white-dark;
     font-size: 15px;
     font-family: sans-serif;
 }
@@ -278,7 +284,7 @@ footer p{
  /*Ajustar Posicion*/  
  width: 200px;
  margin-top: 25px;
- color: #bab5b6;
+ color: $color-white-dark;
 }
 
 .registration-form h2{
@@ -309,7 +315,7 @@ footer p{
     width: 30%;
     border: 0px;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: $color-white-dark;
 }
 
 .registration-form button:hover{
@@ -330,7 +336,7 @@ footer p{
     line-height: 30px;
     text-align: center;
     background: #314652;
-    color: #f1f1f1;
+    color: $color-white-dark;
     border-radius: 50%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
     transition: all .4s ease-in-out;
@@ -360,11 +366,11 @@ footer p{
     text-decoration: none;
 }
 #block1 a:hover{
-    color: rgb(223, 223, 223);
+    color: $color-white-hover;
     transition: 0.2s;
 }
 #block1 p{
-    color: rgb(183, 183, 183);
+    color: $color-gris-rgb;
 }
 
 
@@ -382,7 +388,7 @@ footer p{
     text-decoration: none;
 }
 #block2 a:hover{
-    color: rgb(223, 223, 223);
+    color: $color-white-hover;
     transition: 0.2s;
 }
 #block3{
@@ -399,7 +405,7 @@ footer p{
     margin: 10px;
 }
 #block3 a:hover{
-    color: rgb(223, 223, 223);
+    color: $color-white-hover;
     transition: 0.2s;
 }
 #block4{
@@ -416,7 +422,7 @@ footer p{
     text-decoration: none;
 }
 #block4 a:hover{
-    color: rgb(223, 223, 223);
+    color: $color-white-hover;
     transition: 0.2s;
 }
 
@@ -433,7 +439,7 @@ footer p{
       
   .search button{
     background-color: #0074D9;
-    color: #f2f2f2;
+    color: $color-white-dark;
     padding: 5px 10px;
     margin-right: 16px;
     font-size: 12px;
@@ -579,7 +585,7 @@ footer p{
         color: rgb(62, 59, 59);
     }
     #nav_menu li a:hover {
-        color: #ffffff;
+        color: $color-white-dark;
     }
 
     .buttons {
@@ -621,7 +627,7 @@ footer p{
         text-decoration: none;
     }
     #block1 a:hover{
-        color: rgb(223, 223, 223);
+        color: $color-white-hover;
         transition: 0.2s;
     }
     #block1 p{
@@ -630,7 +636,7 @@ footer p{
     }
     
     #block2 h2{
-        color: rgb(198, 198, 198);
+        color: $color-gris-rgb;
         margin-top: 15px;
     }
     #block2 div{
@@ -652,7 +658,7 @@ footer p{
     }
 
     #block3 h2{
-        color: rgb(198, 198, 198);
+        color: $color-gris-rgb;
         margin-top: 15px;
     }
     #block3 div{
@@ -665,7 +671,7 @@ footer p{
         text-decoration: none;
     }
     #block3 a:hover{
-        color: rgb(223, 223, 223);
+        color: $color-white-hover;
         transition: 0.2s;
     }
     #block3 p{
@@ -674,7 +680,7 @@ footer p{
     }
 
     #block4 h2{
-        color: rgb(198, 198, 198);
+        color: $color-gris-rgb;
         margin-top: 15px;
     }
     #block4 div{
@@ -687,11 +693,11 @@ footer p{
         text-decoration: none;
     }
     #block4 a:hover{
-        color: rgb(223, 223, 223);
+        color: $color-white-hover;
         transition: 0.2s;
     }
     #block4 p{
-        color: rgb(183, 183, 183);
+        color: $color-gris-rgb;
         text-align: center;
     }
     
@@ -704,7 +710,7 @@ footer p{
         
     }
     #artist h2{
-        color: rgb(198, 198, 198);
+        color: $color-gris-rgb;
         margin: 0px;
         font-size: 20px;
     }
@@ -738,7 +744,7 @@ footer p{
           
     .search button{
         background-color: rgba(165, 42, 42, 0);
-        color: #f2f2f2;
+        color: $color-white-dark;
         padding: 0px;
         margin-right: 0px;
         font-size: 5px;
@@ -752,7 +758,7 @@ footer p{
         background-attachment: fixed;
     }
     #lastest_videos h2{
-        color: rgb(198, 198, 198);
+        color: $color-gris-rgb;
         margin: 10px;
         font-size: 20px;
     }
@@ -785,7 +791,7 @@ footer p{
     }
     #event h2{
         margin: 10px;
-        color: rgb(198, 198, 198);
+        color: $color-gris-rgb;
         font-size: 20px;
     }
     #event img{
@@ -831,7 +837,7 @@ footer p{
 /* Estilos para pagina ticket*/
 
 .pruebacolor{
-    background-color: #f2f2f2;
+    background-color: $color-white-dark;
     border: solid black;
 }
 
