@@ -502,32 +502,22 @@ footer p {
     grid-row-gap: 5px;
   }
   header {
-    grid-area: header;
-    width: 320px;
-    background-image: url("../img/vocalist_header.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
     flex-direction: column;
-    justify-content: space-around;
   }
   #middle__div__header {
     height: 170px;
     width: 310px;
-    transform: translate(0px, 110px);
-    border-radius: 10px;
-    background-image: linear-gradient(rgba(114, 30, 91, 0.37), black);
-    background-attachment: fixed;
-    padding-left: 10px;
+    padding-left: 0px;
     padding-top: 10px;
     transform: translate(5px, 10px);
   }
+  #middle__div__header p {
+    padding-left: 10px;
+  }
   #middle__section__header {
-    display: flex;
-    align-items: flex-start;
     margin-top: 30px;
     margin-bottom: 0px;
+    padding-left: 10px;
   }
   #middle__section__header section p, a {
     font-size: small;
@@ -544,7 +534,6 @@ footer p {
     font-size: smaller;
   }
   #publicidad {
-    grid-area: publicidad;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -723,8 +712,6 @@ footer p {
     padding: 10px;
   }
   #artist h2 {
-    color: rgb(198, 198, 198);
-    margin: 0px;
     font-size: 20px;
   }
   #artist p {
@@ -791,14 +778,7 @@ footer p {
     color: rgb(198, 198, 198);
     font-size: 20px;
   }
-  #event {
-    grid-area: event;
-    background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
-    background-attachment: fixed;
-  }
   #event h2 {
-    margin: 10px;
-    color: rgb(198, 198, 198);
     font-size: 20px;
   }
   #event img {
@@ -825,15 +805,10 @@ footer p {
     font-size: 13px;
   }
   footer {
-    grid-area: footer;
     height: 90px;
-    background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
-    background-attachment: fixed;
   }
   footer p {
     margin: 5px;
-    text-align: center;
-    color: rgb(77, 70, 70);
   }
 }
 /* Estilos para pagina ticket*/
@@ -989,18 +964,6 @@ footer p {
     width: 100vw;
     background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
     background-attachment: fixed;
-  }
-  .footer_ticket p {
-    margin: 5px;
-    text-align: center;
-    color: rgb(77, 70, 70);
-  }
-  .header_redes_ticket {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 20px;
-    padding-left: 50px;
   }
   .backgroud_ticket {
     background-image: none;
