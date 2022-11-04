@@ -3,51 +3,53 @@
 
 
 
-@mixin display-flex-full($tipo,$direccion, $justif, $align) {
+@mixin display-flex-full($tipo, $direccion, $justif, $align) {
     display: $tipo;
     flex-direction: $direccion;
     justify-content: $justif;
     align-content: $align;
 }
-@mixin display-flex-vertical($tipo,$direccion, $align) {
+
+@mixin display-flex-vertical($tipo, $direccion, $align) {
     display: $tipo;
     flex-direction: $direccion;
     align-content: $align;
 }
-@mixin display-flex-horizontal($tipo,$direccion, $justif) {
+
+@mixin display-flex-horizontal($tipo, $direccion, $justif) {
     display: $tipo;
     flex-direction: $direccion;
     justify-content: $justif;
 }
 
-#grid__container{
+#grid__container {
     display: grid;
     height: 100vh;
-    grid-template-areas: 
-    " header header header "
-    " menu menu publicidad "
-    " playlist playlist publicidad "
-    " artist artist publicidad "
-    " lastest_videos lastest_videos publicidad "
-    " listen_radio listen_radio publicidad "
-    " event event publicidad "
-    " footer footer footer ";
+    grid-template-areas:
+        " header header header "
+        " menu menu publicidad "
+        " playlist playlist publicidad "
+        " artist artist publicidad "
+        " lastest_videos lastest_videos publicidad "
+        " listen_radio listen_radio publicidad "
+        " event event publicidad "
+        " footer footer footer ";
     grid-template-columns: 1fr 1fr 0.5fr;
     grid-template-rows: 340px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-row-gap: 5px;
 }
 
-#grid__playlist{
+#grid__playlist {
     display: grid;
-    grid-template-areas: 
-    " block1 block2 block3 block4 ";
+    grid-template-areas:
+        " block1 block2 block3 block4 ";
     grid-column-gap: 5px;
     grid-template-rows: 1fr;
     grid-column: span 2;
 }
 
 
-header{
+header {
     grid-area: header;
     background-image: url("../img/vocalist_header.jpg");
     background-repeat: no-repeat;
@@ -56,828 +58,528 @@ header{
     @include display-flex-horizontal(flex, row, space-around);
 }
 
-#middle__div__header{
+#middle__div__header {
     height: 180px;
-    transform: translate(0px,110px);
+    transform: translate(0px, 110px);
     border-radius: 10px;
-    background-image: linear-gradient(rgba(114,30,91,0.37),black);
-    background-attachment: fixed; 
+    background-image: linear-gradient(rgba(114, 30, 91, 0.37), black);
+    background-attachment: fixed;
     padding-left: 10px;
     padding-top: 18px;
 }
 
-#middle__section__header{
+#middle__section__header {
     display: flex;
-    align-items: flex-start;  
+    align-items: flex-start;
 }
 
-#middle__section__header section{
+#middle__section__header section {
     padding-top: 10px;
     margin-right: 15px;
 }
-#middle__section__header section a{
+
+#middle__section__header section a {
     text-decoration: none;
     color: $color-white-dark;
- }
- #middle__section__header p{
+}
+
+#middle__section__header p {
     color: $color-white-dark;
- }
-#menu{
+}
+
+#menu {
     grid-area: menu;
     @include display-flex-horizontal(flex, row, center);
 }
-#menu ul{
+
+#menu ul {
     background-color: $color-gris-rgb;
     width: 50%;
     margin-left: 400px;
     margin-right: 400px;
     border-radius: 5px;
     padding-right: 45px;
-    
+
 
 }
-#nav_menu{
+
+#nav_menu {
     @include display-flex-full(flex, row, center, center);
-}
-#nav_menu li{
-    list-style-type: none;
-    padding: 10px 10px;    
-}
-#nav_menu li a{
-    text-decoration:none;
-    color: rgb(62, 59, 59);
-}
-#nav_menu li a:hover {
-    color: $color-white-dark;
-    transition: 0.2s;
+
+    li {
+        list-style-type: none;
+        padding: 10px 10px;
+
+        a {
+            text-decoration: none;
+            color: rgb(62, 59, 59);
+
+            &:hover {
+                color: $color-white-dark;
+                transition: 0.2s;
+            }
+        }
+    }
 }
 
-#playlist{
+#playlist {
     grid-area: playlist;
 }
 
 
-#artist{
+#artist {
     grid-area: artist;
     @include display-flex-horizontal(flex, column, space-around);
     background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
     background-attachment: fixed;
     padding: 10px;
 }
-#artist h2{
+
+#artist h2 {
     color: $color-gris-rgb;
     margin: 0px;
-}
-#artist p{
-    padding: 10px;
-}
-#artist div{
-    @include display-flex-horizontal(flex, row, space-between);
-    align-items: center;
+
+    p {
+        padding: 10px;
+    }
+
+    div {
+        @include display-flex-horizontal(flex, row, space-between);
+        align-items: center;
+    }
 }
 
-#lastest_videos{
+#lastest_videos {
     grid-area: lastest_videos;
     background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
     background-attachment: fixed;
+
+    h2 {
+        color: $color-gris-rgb;
+        margin: 10px;
+    }
+
+    iframe {
+        padding-left: 325px;
+        padding-bottom: 5px;
+        height: 320px;
+        width: 800px;
+    }
 }
-#lastest_videos h2{
-    color: $color-gris-rgb;
-    margin: 10px;
-}
-#lastest_videos iframe{
-    padding-left: 325px;
-    padding-bottom: 5px;
-    height: 320px;
-    width: 800px;
-}
-#listen_radio{
+
+#listen_radio {
     grid-area: listen_radio;
     margin: 0px;
     background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
     background-attachment: fixed;
-}
-#listen_radio h2{
-    margin: 10px;
-    margin-bottom: 0px;
-    color: $color-gris-rgb;
+
+    h2 {
+        margin: 10px;
+        margin-bottom: 0px;
+        color: $color-gris-rgb;
+    }
 }
 
-#event{
+#event {
     grid-area: event;
     background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
     background-attachment: fixed;
-}
-#event h2{
-    margin: 10px;
-    margin-bottom: 0px;
-    color: $color-gris-rgb;
-}
-#event img{
-    padding-left: 305px;
-    padding-bottom: 5px;
-}
-#event div{
-    @include display-flex-horizontal(flex, row, center);
-}
-#event section{  
-    margin-left: 10px;
-    margin-right: 5px;
-}
-#event section button{
-    margin-top: 5px;
+
+    h2 {
+        margin: 10px;
+        margin-bottom: 0px;
+        color: $color-gris-rgb;
+    }
+
+    img {
+        padding-left: 305px;
+        padding-bottom: 5px;
+    }
+
+    div {
+        @include display-flex-horizontal(flex, row, center);
+    }
+
+    section {
+        margin-left: 10px;
+        margin-right: 5px;
+
+        button {
+            margin-top: 5px;
+        }
+    }
 }
 
-#section_dos_event{
+#section_dos_event {
     margin: 0px;
     padding: 0px;
     @include display-flex-horizontal(flex, column, center);
-}
-#section_dos_event a{
-    text-decoration: none;
-    color: $color-white-dark;
-    font-size: 18px;
-}
-#section_dos_event a:hover{
-    color: $color-red;
-    transition: 0.5s;
+
+    a {
+        text-decoration: none;
+        color: $color-white-dark;
+        font-size: 18px;
+
+        &:hover {
+            color: $color-red;
+            transition: 0.5s;
+        }
+    }
 }
 
-#publicidad{
+#publicidad {
     grid-area: publicidad;
     @include display-flex-horizontal(flex, column, start);
     align-items: center;
-}
-#publicidad img{
-    height: 50%;
-    width: 50%;
-}
-#publicidad section{
-    @include display-flex-horizontal(flex, column, start);
-    align-items: center;
-    text-align: center;
+
+    img {
+        height: 50%;
+        width: 50%;
+    }
+
+    section {
+        @include display-flex-horizontal(flex, column, start);
+        align-items: center;
+        text-align: center;
+    }
 }
 
-footer{
+footer {
     grid-area: footer;
     background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
     background-attachment: fixed;
-}
-footer p{
-    text-align: center;
-    color: rgb(77, 70, 70);
+
+    p {
+        text-align: center;
+        color: rgb(77, 70, 70);
+    }
 }
 
-#logo{
+#logo {
     font-size: 40px;
     padding-left: 40px;
     padding-top: 20px;
 }
 
-#logo2{
+#logo2 {
     margin-left: 0px;
-    color: $color-red;//#c10000;
+    color: $color-red; //#c10000;
 }
 
-#p1__header{
+#p1__header {
     font-family: "Audiowide", sans-serif;
     font-weight: lighter;
     color: $color-white-dark;
 }
 
-#p2__header{
+#p2__header {
     font-family: "Audiowide", sans-serif;
     font-weight: bold;
     font-size: x-large;
     color: rgb(223, 223, 223);
 }
 
-.sectionheader{
+.sectionheader {
     @include display-flex-horizontal(flex, row, space-evenly);
     width: 420px;
+
+    a {
+        text-decoration: none;
+        color: $color-white-dark;
+    }
+
+    p {
+        color: $color-white-dark;
+        font-size: 15px;
+        font-family: sans-serif;
+    }
 }
 
-.sectionheader a{
-    text-decoration: none;
+.registration-form {
+    /*Ajustar Posicion*/
+    width: 200px;
+    margin-top: 25px;
     color: $color-white-dark;
-}
 
-.sectionheader p{
-    color: $color-white-dark;
-    font-size: 15px;
-    font-family: sans-serif;
-}
+    h2 {
+        font-size: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0px 0px;
+    }
 
-.registration-form{
- /*Ajustar Posicion*/  
- width: 200px;
- margin-top: 25px;
- color: $color-white-dark;
-}
+    p {
+        font-size: 15px;
+        margin: 2px 0px;
+    }
 
-.registration-form h2{
-    font-size: 20px;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 0px 0px;
-}
+    input {
+        font-size: 16px;
+        padding: 5px 5px;
+        width: 100%;
+        border-radius: 5px;
+        outline: none;
+    }
 
-.registration-form p{
-    font-size: 15px;
-    margin: 2px 0px;
-}
+    button {
+        font-size: 12px;
+        font-weight: bold;
+        margin: 10px 0px;
+        padding: 8px 0px;
+        width: 30%;
+        border: 0px;
+        border-radius: 5px;
+        background-color: $color-white-dark;
 
-.registration-form input{
-    font-size: 16px;
-    padding: 5px 5px;
-    width: 100%;
-    border-radius: 5px;
-    outline: none;
-}
-
-.registration-form button{
-    font-size: 12px;
-    font-weight: bold;
-    margin: 10px 0px;
-    padding: 8px 0px;
-    width: 30%;
-    border: 0px;
-    border-radius: 5px;
-    background-color: $color-white-dark;
-}
-
-.registration-form button:hover{
-    color:rgb(193, 5, 5);
+        &:hover {
+            color: rgb(193, 5, 5);
+        }
+    }
 }
 
 .buttons {
     @include display-flex-horizontal(flex, row, end);
     align-items: center;
     margin-right: 80px;
+
+    a {
+        text-decoration: none;
+        font-size: 18px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background: #314652;
+        color: $color-white-dark;
+        border-radius: 50%;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+        transition: all .4s ease-in-out;
+    }
+
+    &:hover {
+        transform: scale(1.2);
+    }
 }
-  
-  .buttons a {
-    text-decoration: none;
-    font-size: 18px;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    background: #314652;
-    color: $color-white-dark;
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
-    transition: all .4s ease-in-out;
-  }
-  
-  .buttons :hover {
-    transform: scale(1.2);
-  }
 
 //Class for extend
 
-.For_Blocks{
+.For_Blocks {
     @include display-flex-horizontal(flex, column, center);
     align-items: center;
     background-image: linear-gradient(rgba(0, 90, 162, 0.88), black);
     background-attachment: fixed;
 }
 
-#block1{
+#block1 {
     @extend .For_Blocks;
-}
-#block1 h2{
-    color: rgb(198, 198, 198);
-    margin-top: 15px;
-}
-#block1 div{
-    margin-top: 75px;
-    margin-bottom: 0px;
-}
-#block1 a{
-    color: rgb(110, 93, 71);
-    text-decoration: none;
-}
-#block1 a:hover{
-    color: $color-white-hover;
-    transition: 0.2s;
-}
-#block1 p{
-    color: $color-gris-rgb;
-}
 
 
-#block2{
-    @extend .For_Blocks;
-}
-#block2 img{
-    margin: 10px;
-}
-#block2 a{
-    color: rgb(110, 93, 71);
-    text-decoration: none;
-}
-#block2 a:hover{
-    color: $color-white-hover;
-    transition: 0.2s;
-}
-#block3{
-    @extend .For_Blocks;
-}
-#block3 a{
-    color: rgb(110, 93, 71);
-    text-decoration: none;
-}
-#block3 img{
-    margin: 10px;
-}
-#block3 a:hover{
-    color: $color-white-hover;
-    transition: 0.2s;
-}
-#block4{
-    @extend .For_Blocks;
-}
-#block4 img{
-    margin: 10px;
-}
-#block4 a{
-    color: rgb(110, 93, 71);
-    text-decoration: none;
-}
-#block4 a:hover{
-    color: $color-white-hover;
-    transition: 0.2s;
+    h2 {
+        color: rgb(198, 198, 198);
+        margin-top: 15px;
+    }
+
+    div {
+        margin-top: 75px;
+        margin-bottom: 0px;
+    }
+
+    a {
+        color: rgb(110, 93, 71);
+        text-decoration: none;
+
+        &:hover {
+            color: $color-white-hover;
+            transition: 0.2s;
+        }
+    }
+
+    p {
+        color: $color-gris-rgb;
+    }
 }
 
-.search input[type=text]{
-    width:300px;
-    height:25px;
-    border-radius:25px;
-    border: none;
-  }
-      
-  .search{
-    margin: 0px;
-  }
-      
-  .search button{
-    background-color: #0074D9;
-    color: $color-white-dark;
-    padding: 5px 10px;
-    margin-right: 16px;
-    font-size: 12px;
-    border: none;
-    cursor: pointer;
-  } 
+#block2 {
+    @extend .For_Blocks;
 
-footer{
+    img {
+        margin: 10px;
+    }
+
+    a {
+        color: rgb(110, 93, 71);
+        text-decoration: none;
+
+        &:hover {
+            color: $color-white-hover;
+            transition: 0.2s;
+        }
+    }
+}
+
+#block3 {
+    @extend .For_Blocks;
+
+    a {
+        color: rgb(110, 93, 71);
+        text-decoration: none;
+
+        &:hover {
+            color: $color-white-hover;
+            transition: 0.2s;
+        }
+    }
+
+    img {
+        margin: 10px;
+    }
+
+}
+
+#block4 {
+    @extend .For_Blocks;
+
+    img {
+        margin: 10px;
+    }
+
+    a {
+        color: rgb(110, 93, 71);
+        text-decoration: none;
+
+        &:hover {
+            color: $color-white-hover;
+            transition: 0.2s;
+        }
+    }
+}
+
+.search {
+    display: flex;
+    justify-content: end;
+
+    input[type=text] {
+        width: 300px;
+        height: 25px;
+        border-radius: 25px;
+        border: none;
+    }
+
+    button {
+        background-color: rgba(72, 64, 64, 0);
+        color: $color-white-dark;
+        padding: 5px 10px;
+        margin-right: 16px;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+footer {
     grid-area: footer;
     height: 90px;
     background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
     background-attachment: fixed;
-}
-footer p{
-    margin: 5px;
-    text-align: center;
-    color: rgb(77, 70, 70);
-}
 
-  /*Media Query*/
-
-  @media all and (max-width: 320px) {
-
-    *{
-        margin: 0px;
-    }
-    #grid__container{
-        display: grid;
-        height: 100vh;
-        grid-template-areas: 
-        " header "
-        " publicidad "
-        " menu "
-        " playlist "
-        " artist "
-        " lastest_videos "
-        " listen_radio "
-        " event "
-        " footer ";
-        grid-template-columns: 320px;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-row-gap: 5px;
-    }
-
-    header{
-       // width: 100%;
-        flex-direction: column;
-    }
-    
-    #middle__div__header{
-        height: 170px;
-        width: 310px;
-        padding-left: 0px;
-        padding-top: 10px;
-        transform: translate(5px,10px);
-    }
-    #middle__div__header p{
-        padding-left: 10px;
-    }
-    
-    #middle__section__header{
-        margin-top: 30px;
-        margin-bottom: 0px;  
-        padding-left: 10px;     
-    }
-    #middle__section__header section p,a{
-        font-size:small;
-    }
-
-    .registration-form{
-        width: 320px;
-        @include display-flex-horizontal(flex, column-reverse, space-between);
-        align-items: center; 
-    }
-    .registration-form form input,p{
-        height: 20px;
-        font-size: smaller;
-    }
-
-    #publicidad{
-        @include display-flex-horizontal(flex, row, space-between);
-        align-items: flex-start;
-    }
-    #publicidad h2{
-        font-size: smaller;
-    }
-    #publicidad img{
-        height: 25px;
-        width: 30px;
-    }
-    #publicidad section{
-        @include display-flex-horizontal(flex, row, space-between);
-    }
-    #publicidad section a{
-        font-size: 10px;
-    }
-
-    #menu{
-        grid-area: menu;
-        margin: 0px;
-        padding: 0px;
-        @include display-flex-horizontal(flex, row-reverse, right);
-
-    }
-    #menu nav{
-        margin: 0px;
-        padding: 0px;
-    }
-    #menu ul{
-        padding-left: 0px;
-        padding: 0px;
-        margin-right: 0px;
-        width: 320px;
-        border-radius: 0px;
-    }
-    #menu ul li{
-        padding-left: 0px;
-        padding: 5px;
-    }
-    #nav_menu{
-        margin: 0px;
-        padding: 0px;
-        width: 320px;
-        @include display-flex-horizontal(flex, row-reverse, center);
-    }
- 
-    #nav_menu li{
-        list-style-type: none;
-        margin: 0px; 
-        padding: 5px;   
-    }
-    #nav_menu li a{
-        text-decoration:none;
-        color: rgb(62, 59, 59);
-    }
-    #nav_menu li a:hover {
-        color: $color-white-dark;
-    }
-
-    .buttons {
-        display: none;
-    }
-
-    
-    #grid__playlist{
-        display: grid;
-        grid-template-areas: 
-        " block1 "
-        " block2 "
-        " block3 "
-        " block4 ";
-        grid-column-gap: 0px;
-        grid-row-gap: 5px;
-        grid-template-columns: 320px;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        /*grid-column: span 2;*/
-    }
-    #block1{
-        @include display-flex-horizontal(flex, column, center);
-        align-items: center;
-        background-image: linear-gradient(rgba(0, 90, 162, 0.88), black);
-        background-attachment: fixed;
-    }
-    #block1 h2{
-        color: rgb(198, 198, 198);
-        margin-top: 15px;
-        font-size: 20px;
-    }
-    #block1 div{
-        margin-top: 75px;
-        margin-bottom: 0px;
-    }
-    #block1 a{
-        padding-left: 250px;
-        color: rgb(110, 93, 71);
-        text-decoration: none;
-    }
-    #block1 a:hover{
-        color: $color-white-hover;
-        transition: 0.2s;
-    }
-    #block1 p{
-        color: rgb(183, 183, 183);
-        text-align: center;
-    }
-    
-    #block2 h2{
-        color: $color-gris-rgb;
-        margin-top: 15px;
-    }
-    #block2 div{
-        margin-top: 75px;
-        margin-bottom: 0px;
-    }
-    #block2 a{
-        padding-left: 250px;
-        color: rgb(175, 99, 1);
-        text-decoration: none;
-    }
-    #block2 a:hover{
-        color: rgb(110, 93, 71);
-        transition: 0.2s;
-    }
-    #block2 p{
-        color: rgb(183, 183, 183);
-        text-align: center;
-    }
-
-    #block3 h2{
-        color: $color-gris-rgb;
-        margin-top: 15px;
-    }
-    #block3 div{
-        margin-top: 75px;
-        margin-bottom: 0px;
-    }
-    #block3 a{
-        padding-left: 250px;
-        color: rgb(175, 99, 1);
-        text-decoration: none;
-    }
-    #block3 a:hover{
-        color: $color-white-hover;
-        transition: 0.2s;
-    }
-    #block3 p{
-        color: rgb(183, 183, 183);
-        text-align: center;
-    }
-
-    #block4 h2{
-        color: $color-gris-rgb;
-        margin-top: 15px;
-    }
-    #block4 div{
-        margin-top: 75px;
-        margin-bottom: 0px;
-    }
-    #block4 a{
-        padding-left: 250px;
-        color: rgb(175, 99, 1);
-        text-decoration: none;
-    }
-    #block4 a:hover{
-        color: $color-white-hover;
-        transition: 0.2s;
-    }
-    #block4 p{
-        color: $color-gris-rgb;
-        text-align: center;
-    }
-    
-    #artist{
-        grid-area: artist;
-        @include display-flex-horizontal(flex, column, space-around);
-        background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
-        background-attachment: fixed;
-        padding: 10px;
-        
-    }
-    #artist h2{
-        font-size: 20px;
-    }
-    #artist p{
-        text-align: justify;
-        margin-top: 0px;
-        padding-top: 0px;
-        height: 150px;
-        overflow: hidden;
-    }
-   
-    #artist div{
-        @include display-flex-horizontal(flex, row, space-between);
-        align-items: flex-start;
-    }
-    #artist div img{
-        height: 150px;
-        width: 150px;
-    }
-
-    .search input[type=text]{
-        width:130px;
-        height:15px;
-        border-radius:25px;
-        border: none;
-    }
-          
-    .search{
-        margin: 0px;
-    }
-          
-    .search button{
-        background-color: rgba(165, 42, 42, 0);
-        color: $color-white-dark;
-        padding: 0px;
-        margin-right: 0px;
-        font-size: 5px;
-        border: none;
-        cursor: pointer;
-    } 
-    
-    #lastest_videos{
-        grid-area: lastest_videos;
-        background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
-        background-attachment: fixed;
-    }
-    #lastest_videos h2{
-        color: $color-gris-rgb;
-        margin: 10px;
-        font-size: 20px;
-    }
-    #lastest_videos iframe{
-        padding-left: 10px;
-        padding-right: 0px;
-        padding-bottom: 0px;
-        height: 250px;
-        width: 310px;
-    }
-
-
-    #listen_radio{
-        grid-area: listen_radio;
-        margin: 0px;
-        background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
-        background-attachment: fixed;
-    }
-    #listen_radio h2{
-        margin: 10px;
-        margin-bottom: 0px;
-        color: rgb(198, 198, 198);
-        font-size: 20px;
-    }
-    
-    #event h2{
-        font-size: 20px;
-    }
-    #event img{
-        padding-left: 10px;
-        padding-right: 0px;
-        margin-bottom: 10px;
-        margin-right: 0px;
-        height: 200px;
-        width: 250px;
-    }
-    #event div{
-        @include display-flex-horizontal(flex, row, space-around);
-        align-items: flex-start;
-    }
-
-    #event section button{
-        margin:0px
-    }
-    #event section p{
-        display: none;
-    }
-
-    #section_dos_event a{
-        font-size: 13px;
-    }
-
-    footer{
-        height: 90px;
-    }
-    footer p{
+    p {
         margin: 5px;
+        text-align: center;
+        color: rgb(77, 70, 70);
     }
 }
 
 /* Estilos para pagina ticket*/
 
-.pruebacolor{
+.pruebacolor {
     background-color: $color-white-dark;
     border: solid black;
 }
 
-#logo_ticket{
+#logo_ticket {
     font-size: 40px;
     padding-left: 40px;
     padding-top: 20px;
 }
 
-#logo2_ticket{
+#logo2_ticket {
     margin-left: 0px;
     color: $color-red;
 }
 
-.centralizador{
+.centralizador {
     @include display-flex-horizontal(flex, column, center);
     align-items: center;
+
+    p {
+        text-align: center;
+    }
+
+    h5 {
+        color: rgb(235, 235, 235);
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+    }
 }
 
-.centralizador p{
-    text-align: center;
-}
-
-.centralizador h5{
-    color: rgb(235, 235, 235);
-}
-
-.centralizador img{
-  width: 300px;
-    height: 300px;
-}
-
-.gunsimg_ticket{
+.gunsimg_ticket {
     @include display-flex-horizontal(flex, row, center);
 }
 
-.footer_ticket{
+.footer_ticket {
     @include display-flex-horizontal(flex, row, center);
     height: 90px;
     background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
     background-attachment: fixed;
 }
-.footer_ticket p{
+
+.footer_ticket p {
     margin: 5px;
     width: 90vw;
     text-align: center;
     color: rgb(77, 70, 70);
 }
 
-.header_ticket{
+.header_ticket {
     @include display-flex-horizontal(flex, row, center);
     padding-top: 20px;
 }
 
-.header_redes_ticket{
+.header_redes_ticket {
     @include display-flex-horizontal(flex, row, space-between);
     padding-top: 20px;
     margin: 0px;
-}
-.header_redes_ticket ul{
-    margin-right: 20px; 
-}
-.header_redes_ticket li{
-    list-style-type: none;  
-}
-.header_redes_ticket li a{
-    text-decoration:none;
-    color: rgb(62, 59, 59);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 25px;
-}
-.header_redes_ticket li a:hover {
-    color: #989898;
-    transition: 0.2s;
+
+    ul {
+        margin-right: 20px;
+    }
+
+    li {
+        list-style-type: none;
+
+        a {
+            text-decoration: none;
+            color: rgb(62, 59, 59);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 25px;
+
+            &:hover {
+                color: #989898;
+                transition: 0.2s;
+            }
+        }
+    }
 }
 
-#header_fondo_ticket{
+#header_fondo_ticket {
     background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
     background-attachment: fixed;
 }
 
-.backgroud_ticket{
+.backgroud_ticket {
     padding-top: 20px;
     padding-bottom: 20px;
     background-image: url("../img/estadio.jpg");
@@ -885,30 +587,30 @@ footer p{
     background-size: cover;
 }
 
-.backgroud_ticket p{
+.backgroud_ticket p {
     color: rgb(224, 223, 223);
 }
 
-#animacion_ticket_h2{
+#animacion_ticket_h2 {
     padding-top: 20px;
     animation-duration: 5s;
     animation-name: slidein;
     animation-iteration-count: infinite;
 }
-  
-  @keyframes slidein {
-    from {
-      margin-left: 50%;
-      width: 100%
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-  }
 
-#teloneros_h5_ticket{
+@keyframes slidein {
+    from {
+        margin-left: 50%;
+        width: 100%
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+#teloneros_h5_ticket {
     background-image: linear-gradient(rgba(129, 129, 129, 0.54), rgba(255, 255, 255, 0.556));
     background-attachment: fixed;
     @include display-flex-horizontal(flex, row, center);
@@ -916,31 +618,435 @@ footer p{
     padding-top: 5px;
 }
 
+//Media Query Ticket
 
 @media all and (max-width: 720px) {
-.gunsimg_ticket{
-    @include display-flex-horizontal(flex, row, center);
+    .gunsimg_ticket {
+        @include display-flex-horizontal(flex, row, center);
+
+        img {
+            width: 300px;
+            height: 250px;
+        }
+    }
+
+    .footer_ticket {
+        height: 160px;
+        width: 100vw;
+        background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
+        background-attachment: fixed;
+    }
+
+    .backgroud_ticket {
+        background-image: none;
+        background-image: linear-gradient(rgb(66, 66, 66), rgba(119, 0, 0, 0.51));
+        background-attachment: fixed;
+    }
+
 }
 
-.gunsimg_ticket img{
-    width: 300px;
-    height: 250px;
+/*Media Query Index*/
+
+@media all and (max-width: 320px) {
+
+    * {
+        margin: 0px;
+    }
+
+    #grid__container {
+        display: grid;
+        height: 100vh;
+        grid-template-areas:
+            " header "
+            " publicidad "
+            " menu "
+            " playlist "
+            " artist "
+            " lastest_videos "
+            " listen_radio "
+            " event "
+            " footer ";
+        grid-template-columns: 320px;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-row-gap: 5px;
+    }
+
+    header {
+        // width: 100%;
+        flex-direction: column;
+    }
+
+    #middle__div__header {
+        height: 170px;
+        width: 310px;
+        padding-left: 0px;
+        padding-top: 10px;
+        transform: translate(5px, 10px);
+
+        p {
+            padding-left: 10px;
+        }
+    }
+
+    #middle__section__header {
+        margin-top: 30px;
+        margin-bottom: 0px;
+        padding-left: 10px;
+
+        a {
+            font-size: small;
+        }
+
+        p {
+            font-size: small;
+        }
+    }
+
+    .registration-form {
+        width: 320px;
+        @include display-flex-horizontal(flex, column-reverse, space-between);
+        align-items: center;
+
+        form input {
+            height: 20px;
+            font-size: smaller;
+        }
+
+        p {
+            height: 20px;
+            font-size: smaller;
+        }
+    }
+
+    #publicidad {
+        @include display-flex-horizontal(flex, row, space-between);
+        align-items: flex-start;
+
+        h2 {
+            font-size: smaller;
+        }
+
+        img {
+            height: 25px;
+            width: 30px;
+        }
+
+        section {
+            @include display-flex-horizontal(flex, row, space-between);
+
+            a {
+                font-size: 10px;
+            }
+        }
+    }
+
+    #menu {
+        grid-area: menu;
+        margin: 0px;
+        padding: 0px;
+        @include display-flex-horizontal(flex, row-reverse, right);
+
+        nav {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        ul {
+            padding-left: 0px;
+            padding: 0px;
+            margin-right: 0px;
+            width: 320px;
+            border-radius: 0px;
+
+            li {
+                padding-left: 0px;
+                padding: 5px;
+            }
+        }
+    }
+
+    #nav_menu {
+        margin: 0px;
+        padding: 0px;
+        width: 320px;
+        @include display-flex-horizontal(flex, row-reverse, center);
+
+        li {
+            list-style-type: none;
+            margin: 0px;
+            padding: 5px;
+
+            a {
+                text-decoration: none;
+                color: rgb(62, 59, 59);
+
+                &:hover {
+                    color: $color-white-dark;
+                }
+            }
+        }
+    }
+
+    .buttons {
+        display: none;
+    }
+
+
+    #grid__playlist {
+        display: grid;
+        grid-template-areas:
+            " block1 "
+            " block2 "
+            " block3 "
+            " block4 ";
+        grid-column-gap: 0px;
+        grid-row-gap: 5px;
+        grid-template-columns: 320px;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        /*grid-column: span 2;*/
+    }
+
+    #block1 {
+        @include display-flex-horizontal(flex, column, center);
+        align-items: center;
+        background-image: linear-gradient(rgba(0, 90, 162, 0.88), black);
+        background-attachment: fixed;
+
+        h2 {
+            color: rgb(198, 198, 198);
+            margin-top: 15px;
+            font-size: 20px;
+        }
+
+        div {
+            margin-top: 75px;
+            margin-bottom: 0px;
+        }
+
+        a {
+            padding-left: 250px;
+            color: rgb(110, 93, 71);
+            text-decoration: none;
+
+            &:hover {
+                color: $color-white-hover;
+                transition: 0.2s;
+            }
+        }
+
+        p {
+            color: rgb(183, 183, 183);
+            text-align: center;
+        }
+    }
+
+    #block2 {
+        h2 {
+            color: $color-gris-rgb;
+            margin-top: 15px;
+        }
+
+        div {
+            margin-top: 75px;
+            margin-bottom: 0px;
+        }
+
+        a {
+            padding-left: 250px;
+            color: rgb(175, 99, 1);
+            text-decoration: none;
+
+            &:hover {
+                color: rgb(110, 93, 71);
+                transition: 0.2s;
+            }
+        }
+
+        p {
+            color: rgb(183, 183, 183);
+            text-align: center;
+        }
+    }
+
+    #block3 {
+        h2 {
+            color: $color-gris-rgb;
+            margin-top: 15px;
+        }
+
+        div {
+            margin-top: 75px;
+            margin-bottom: 0px;
+        }
+
+        a {
+            padding-left: 250px;
+            color: rgb(175, 99, 1);
+            text-decoration: none;
+
+            &:hover {
+                color: $color-white-hover;
+                transition: 0.2s;
+            }
+        }
+
+        p {
+            color: rgb(183, 183, 183);
+            text-align: center;
+        }
+    }
+
+    #block4 {
+        h2 {
+            color: $color-gris-rgb;
+            margin-top: 15px;
+        }
+
+        div {
+            margin-top: 75px;
+            margin-bottom: 0px;
+        }
+
+        a {
+            padding-left: 250px;
+            color: rgb(175, 99, 1);
+            text-decoration: none;
+
+
+            &:hover {
+                color: $color-white-hover;
+                transition: 0.2s;
+            }
+        }
+
+        p {
+            color: $color-gris-rgb;
+            text-align: center;
+        }
+    }
+
+    #artist {
+        grid-area: artist;
+        @include display-flex-horizontal(flex, column, space-around);
+        background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
+        background-attachment: fixed;
+        padding: 10px;
+
+
+        h2 {
+            font-size: 20px;
+        }
+
+        p {
+            text-align: justify;
+            margin-top: 0px;
+            padding-top: 0px;
+            height: 150px;
+            overflow: hidden;
+        }
+
+        div {
+            @include display-flex-horizontal(flex, row, space-between);
+            align-items: flex-start;
+
+            img {
+                height: 150px;
+                width: 150px;
+            }
+        }
+    }
+
+    .search {
+        input[type=text] {
+            width: 130px;
+            height: 15px;
+            border-radius: 25px;
+            border: none;
+        }
+
+        button {
+            background-color: rgba(165, 42, 42, 0);
+            color: $color-white-dark;
+            padding: 0px;
+            margin-right: 0px;
+            font-size: 5px;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    #lastest_videos {
+        grid-area: lastest_videos;
+        background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
+        background-attachment: fixed;
+
+        h2 {
+            color: $color-gris-rgb;
+            margin: 10px;
+            font-size: 20px;
+        }
+
+        iframe {
+            padding-left: 10px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+            height: 250px;
+            width: 310px;
+        }
+    }
+
+    #listen_radio {
+        grid-area: listen_radio;
+        margin: 0px;
+        background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
+        background-attachment: fixed;
+
+        h2 {
+            margin: 10px;
+            margin-bottom: 0px;
+            color: rgb(198, 198, 198);
+            font-size: 20px;
+        }
+    }
+
+    #event {
+        h2 {
+            font-size: 20px;
+        }
+
+        img {
+            padding-left: 10px;
+            padding-right: 0px;
+            margin-bottom: 10px;
+            margin-right: 0px;
+            height: 200px;
+            width: 250px;
+        }
+
+        div {
+            @include display-flex-horizontal(flex, row, space-around);
+            align-items: flex-start;
+        }
+
+        section button {
+            margin: 0px
+        }
+
+        section p {
+            display: none;
+        }
+    }
+
+    #section_dos_event a {
+        font-size: 13px;
+    }
+
+    footer {
+        height: 90px;
+
+        p {
+            margin: 5px;
+        }
+    }
 }
-
-.footer_ticket{
-    height: 160px;
-    width: 100vw;
-    background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
-    background-attachment: fixed;
-}
-
-.backgroud_ticket{
-    background-image:none;
-    background-image:linear-gradient(rgb(66, 66, 66), rgba(119, 0, 0, 0.51));
-    background-attachment: fixed;
-}
-
-}
-
-
 

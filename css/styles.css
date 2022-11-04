@@ -82,17 +82,14 @@ header {
   justify-content: center;
   align-content: center;
 }
-
 #nav_menu li {
   list-style-type: none;
   padding: 10px 10px;
 }
-
 #nav_menu li a {
   text-decoration: none;
   color: rgb(62, 59, 59);
 }
-
 #nav_menu li a:hover {
   color: #c8c8c8;
   transition: 0.2s;
@@ -116,12 +113,10 @@ header {
   color: rgb(198, 198, 198);
   margin: 0px;
 }
-
-#artist p {
+#artist h2 p {
   padding: 10px;
 }
-
-#artist div {
+#artist h2 div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -133,12 +128,10 @@ header {
   background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
   background-attachment: fixed;
 }
-
 #lastest_videos h2 {
   color: rgb(198, 198, 198);
   margin: 10px;
 }
-
 #lastest_videos iframe {
   padding-left: 325px;
   padding-bottom: 5px;
@@ -152,7 +145,6 @@ header {
   background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
   background-attachment: fixed;
 }
-
 #listen_radio h2 {
   margin: 10px;
   margin-bottom: 0px;
@@ -164,29 +156,24 @@ header {
   background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
   background-attachment: fixed;
 }
-
 #event h2 {
   margin: 10px;
   margin-bottom: 0px;
   color: rgb(198, 198, 198);
 }
-
 #event img {
   padding-left: 305px;
   padding-bottom: 5px;
 }
-
 #event div {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-
 #event section {
   margin-left: 10px;
   margin-right: 5px;
 }
-
 #event section button {
   margin-top: 5px;
 }
@@ -198,13 +185,11 @@ header {
   flex-direction: column;
   justify-content: center;
 }
-
 #section_dos_event a {
   text-decoration: none;
   color: #c8c8c8;
   font-size: 18px;
 }
-
 #section_dos_event a:hover {
   color: #c10000;
   transition: 0.5s;
@@ -217,12 +202,10 @@ header {
   justify-content: start;
   align-items: center;
 }
-
 #publicidad img {
   height: 50%;
   width: 50%;
 }
-
 #publicidad section {
   display: flex;
   flex-direction: column;
@@ -236,7 +219,6 @@ footer {
   background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
   background-attachment: fixed;
 }
-
 footer p {
   text-align: center;
   color: rgb(77, 70, 70);
@@ -272,12 +254,10 @@ footer p {
   justify-content: space-evenly;
   width: 420px;
 }
-
 .sectionheader a {
   text-decoration: none;
   color: #c8c8c8;
 }
-
 .sectionheader p {
   color: #c8c8c8;
   font-size: 15px;
@@ -290,19 +270,16 @@ footer p {
   margin-top: 25px;
   color: #c8c8c8;
 }
-
 .registration-form h2 {
   font-size: 20px;
   text-align: center;
   text-transform: uppercase;
   margin: 0px 0px;
 }
-
 .registration-form p {
   font-size: 15px;
   margin: 2px 0px;
 }
-
 .registration-form input {
   font-size: 16px;
   padding: 5px 5px;
@@ -310,7 +287,6 @@ footer p {
   border-radius: 5px;
   outline: none;
 }
-
 .registration-form button {
   font-size: 12px;
   font-weight: bold;
@@ -321,7 +297,6 @@ footer p {
   border-radius: 5px;
   background-color: #c8c8c8;
 }
-
 .registration-form button:hover {
   color: rgb(193, 5, 5);
 }
@@ -333,7 +308,6 @@ footer p {
   align-items: center;
   margin-right: 80px;
 }
-
 .buttons a {
   text-decoration: none;
   font-size: 18px;
@@ -347,8 +321,7 @@ footer p {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   transition: all 0.4s ease-in-out;
 }
-
-.buttons :hover {
+.buttons:hover {
   transform: scale(1.2);
 }
 
@@ -365,22 +338,18 @@ footer p {
   color: rgb(198, 198, 198);
   margin-top: 15px;
 }
-
 #block1 div {
   margin-top: 75px;
   margin-bottom: 0px;
 }
-
 #block1 a {
   color: rgb(110, 93, 71);
   text-decoration: none;
 }
-
 #block1 a:hover {
   color: rgb(223, 223, 223);
   transition: 0.2s;
 }
-
 #block1 p {
   color: rgb(198, 198, 198);
 }
@@ -388,12 +357,10 @@ footer p {
 #block2 img {
   margin: 10px;
 }
-
 #block2 a {
   color: rgb(110, 93, 71);
   text-decoration: none;
 }
-
 #block2 a:hover {
   color: rgb(223, 223, 223);
   transition: 0.2s;
@@ -403,43 +370,38 @@ footer p {
   color: rgb(110, 93, 71);
   text-decoration: none;
 }
-
-#block3 img {
-  margin: 10px;
-}
-
 #block3 a:hover {
   color: rgb(223, 223, 223);
   transition: 0.2s;
+}
+#block3 img {
+  margin: 10px;
 }
 
 #block4 img {
   margin: 10px;
 }
-
 #block4 a {
   color: rgb(110, 93, 71);
   text-decoration: none;
 }
-
 #block4 a:hover {
   color: rgb(223, 223, 223);
   transition: 0.2s;
 }
 
+.search {
+  display: flex;
+  justify-content: end;
+}
 .search input[type=text] {
   width: 300px;
   height: 25px;
   border-radius: 25px;
   border: none;
 }
-
-.search {
-  margin: 0px;
-}
-
 .search button {
-  background-color: #0074D9;
+  background-color: rgba(72, 64, 64, 0);
   color: #c8c8c8;
   padding: 5px 10px;
   margin-right: 16px;
@@ -454,14 +416,166 @@ footer {
   background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
   background-attachment: fixed;
 }
-
 footer p {
   margin: 5px;
   text-align: center;
   color: rgb(77, 70, 70);
 }
 
-/*Media Query*/
+/* Estilos para pagina ticket*/
+.pruebacolor {
+  background-color: #c8c8c8;
+  border: solid black;
+}
+
+#logo_ticket {
+  font-size: 40px;
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+#logo2_ticket {
+  margin-left: 0px;
+  color: #c10000;
+}
+
+.centralizador {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.centralizador p {
+  text-align: center;
+}
+.centralizador h5 {
+  color: rgb(235, 235, 235);
+}
+.centralizador img {
+  width: 300px;
+  height: 300px;
+}
+
+.gunsimg_ticket {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer_ticket {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 90px;
+  background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
+  background-attachment: fixed;
+}
+
+.footer_ticket p {
+  margin: 5px;
+  width: 90vw;
+  text-align: center;
+  color: rgb(77, 70, 70);
+}
+
+.header_ticket {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.header_redes_ticket {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 20px;
+  margin: 0px;
+}
+.header_redes_ticket ul {
+  margin-right: 20px;
+}
+.header_redes_ticket li {
+  list-style-type: none;
+}
+.header_redes_ticket li a {
+  text-decoration: none;
+  color: rgb(62, 59, 59);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 25px;
+}
+.header_redes_ticket li a:hover {
+  color: #989898;
+  transition: 0.2s;
+}
+
+#header_fondo_ticket {
+  background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
+  background-attachment: fixed;
+}
+
+.backgroud_ticket {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-image: url("../img/estadio.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.backgroud_ticket p {
+  color: rgb(224, 223, 223);
+}
+
+#animacion_ticket_h2 {
+  padding-top: 20px;
+  animation-duration: 5s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 50%;
+    width: 100%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+#teloneros_h5_ticket {
+  background-image: linear-gradient(rgba(129, 129, 129, 0.54), rgba(255, 255, 255, 0.556));
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+}
+
+@media all and (max-width: 720px) {
+  .gunsimg_ticket {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .gunsimg_ticket img {
+    width: 300px;
+    height: 250px;
+  }
+  .footer_ticket {
+    height: 160px;
+    width: 100vw;
+    background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
+    background-attachment: fixed;
+  }
+  .backgroud_ticket {
+    background-image: none;
+    background-image: linear-gradient(rgb(66, 66, 66), rgba(119, 0, 0, 0.51));
+    background-attachment: fixed;
+  }
+}
+/*Media Query Index*/
 @media all and (max-width: 320px) {
   * {
     margin: 0px;
@@ -492,7 +606,10 @@ footer p {
     margin-bottom: 0px;
     padding-left: 10px;
   }
-  #middle__section__header section p, a {
+  #middle__section__header a {
+    font-size: small;
+  }
+  #middle__section__header p {
     font-size: small;
   }
   .registration-form {
@@ -502,7 +619,11 @@ footer p {
     justify-content: space-between;
     align-items: center;
   }
-  .registration-form form input, p {
+  .registration-form form input {
+    height: 20px;
+    font-size: smaller;
+  }
+  .registration-form p {
     height: 20px;
     font-size: smaller;
   }
@@ -710,9 +831,6 @@ footer p {
     border-radius: 25px;
     border: none;
   }
-  .search {
-    margin: 0px;
-  }
   .search button {
     background-color: rgba(165, 42, 42, 0);
     color: #c8c8c8;
@@ -782,166 +900,6 @@ footer p {
   }
   footer p {
     margin: 5px;
-  }
-}
-/* Estilos para pagina ticket*/
-.pruebacolor {
-  background-color: #c8c8c8;
-  border: solid black;
-}
-
-#logo_ticket {
-  font-size: 40px;
-  padding-left: 40px;
-  padding-top: 20px;
-}
-
-#logo2_ticket {
-  margin-left: 0px;
-  color: #c10000;
-}
-
-.centralizador {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.centralizador p {
-  text-align: center;
-}
-
-.centralizador h5 {
-  color: rgb(235, 235, 235);
-}
-
-.centralizador img {
-  width: 300px;
-  height: 300px;
-}
-
-.gunsimg_ticket {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.footer_ticket {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height: 90px;
-  background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
-  background-attachment: fixed;
-}
-
-.footer_ticket p {
-  margin: 5px;
-  width: 90vw;
-  text-align: center;
-  color: rgb(77, 70, 70);
-}
-
-.header_ticket {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-top: 20px;
-}
-
-.header_redes_ticket {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-top: 20px;
-  margin: 0px;
-}
-
-.header_redes_ticket ul {
-  margin-right: 20px;
-}
-
-.header_redes_ticket li {
-  list-style-type: none;
-}
-
-.header_redes_ticket li a {
-  text-decoration: none;
-  color: rgb(62, 59, 59);
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 25px;
-}
-
-.header_redes_ticket li a:hover {
-  color: #989898;
-  transition: 0.2s;
-}
-
-#header_fondo_ticket {
-  background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
-  background-attachment: fixed;
-}
-
-.backgroud_ticket {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-image: url("../img/estadio.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.backgroud_ticket p {
-  color: rgb(224, 223, 223);
-}
-
-#animacion_ticket_h2 {
-  padding-top: 20px;
-  animation-duration: 5s;
-  animation-name: slidein;
-  animation-iteration-count: infinite;
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 50%;
-    width: 100%;
-  }
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-#teloneros_h5_ticket {
-  background-image: linear-gradient(rgba(129, 129, 129, 0.54), rgba(255, 255, 255, 0.556));
-  background-attachment: fixed;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding-top: 5px;
-}
-
-@media all and (max-width: 720px) {
-  .gunsimg_ticket {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .gunsimg_ticket img {
-    width: 300px;
-    height: 250px;
-  }
-  .footer_ticket {
-    height: 160px;
-    width: 100vw;
-    background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
-    background-attachment: fixed;
-  }
-  .backgroud_ticket {
-    background-image: none;
-    background-image: linear-gradient(rgb(66, 66, 66), rgba(119, 0, 0, 0.51));
-    background-attachment: fixed;
   }
 }
 
