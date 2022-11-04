@@ -47,7 +47,6 @@
 }
 
 
-
 header{
     grid-area: header;
     background-image: url("../img/vocalist_header.jpg");
@@ -335,12 +334,17 @@ footer p{
     transform: scale(1.2);
   }
 
+//Class for extend
 
-#block1{
+.For_Blocks{
     @include display-flex-horizontal(flex, column, center);
     align-items: center;
     background-image: linear-gradient(rgba(0, 90, 162, 0.88), black);
     background-attachment: fixed;
+}
+
+#block1{
+    @extend .For_Blocks;
 }
 #block1 h2{
     color: rgb(198, 198, 198);
@@ -364,10 +368,7 @@ footer p{
 
 
 #block2{
-    @include display-flex-horizontal(flex, column, center);
-    align-items: center;
-    background-image: linear-gradient(rgba(132, 132, 132, 0.88), black);
-    background-attachment: fixed;
+    @extend .For_Blocks;
 }
 #block2 img{
     margin: 10px;
@@ -381,10 +382,7 @@ footer p{
     transition: 0.2s;
 }
 #block3{
-    @include display-flex-horizontal(flex, column, center);
-    align-items: center;
-    background-image: linear-gradient(rgba(132, 132, 132, 0.88), black);
-    background-attachment: fixed;
+    @extend .For_Blocks;
 }
 #block3 a{
     color: rgb(110, 93, 71);
@@ -398,10 +396,7 @@ footer p{
     transition: 0.2s;
 }
 #block4{
-    @include display-flex-horizontal(flex, column, center);
-    align-items: center;
-    background-image: linear-gradient(rgba(132, 132, 132, 0.88), black);
-    background-attachment: fixed;
+    @extend .For_Blocks;
 }
 #block4 img{
     margin: 10px;
