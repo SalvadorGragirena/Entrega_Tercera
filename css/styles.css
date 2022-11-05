@@ -448,8 +448,8 @@ footer p {
 .centralizador p {
   text-align: center;
 }
-.centralizador h5 {
-  color: rgb(235, 235, 235);
+.centralizador h2 {
+  color: #292929;
 }
 .centralizador img {
   width: 300px;
