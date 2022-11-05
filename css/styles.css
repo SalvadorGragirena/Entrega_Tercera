@@ -8,7 +8,7 @@
   height: 100vh;
   grid-template-areas: " header header header " " menu menu publicidad " " playlist playlist publicidad " " artist artist publicidad " " lastest_videos lastest_videos publicidad " " listen_radio listen_radio publicidad " " event event publicidad " " footer footer footer ";
   grid-template-columns: 1fr 1fr 0.5fr;
-  grid-template-rows: 340px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-row-gap: 5px;
 }
 
@@ -108,15 +108,14 @@ header {
   background-attachment: fixed;
   padding: 10px;
 }
-
 #artist h2 {
   color: rgb(198, 198, 198);
   margin: 0px;
 }
-#artist h2 p {
+#artist p {
   padding: 10px;
 }
-#artist h2 div {
+#artist div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -131,9 +130,10 @@ header {
 #lastest_videos h2 {
   color: rgb(198, 198, 198);
   margin: 10px;
+  align-items: flex-start;
 }
 #lastest_videos iframe {
-  padding-left: 325px;
+  margin-left: 23%;
   padding-bottom: 5px;
   height: 320px;
   width: 800px;
@@ -602,8 +602,6 @@ footer p {
     padding-left: 10px;
   }
   #middle__section__header {
-    margin-top: 30px;
-    margin-bottom: 0px;
     padding-left: 10px;
   }
   #middle__section__header a {
@@ -674,9 +672,9 @@ footer p {
   #nav_menu {
     margin: 0px;
     padding: 0px;
-    width: 320px;
+    width: 100%;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: center;
   }
   #nav_menu li {
@@ -687,6 +685,7 @@ footer p {
   #nav_menu li a {
     text-decoration: none;
     color: rgb(62, 59, 59);
+    font-size: small;
   }
   #nav_menu li a:hover {
     color: #c8c8c8;
@@ -851,11 +850,11 @@ footer p {
     font-size: 20px;
   }
   #lastest_videos iframe {
-    padding-left: 10px;
+    margin-left: 10px;
     padding-right: 0px;
     padding-bottom: 0px;
     height: 250px;
-    width: 310px;
+    width: 300px;
   }
   #listen_radio {
     grid-area: listen_radio;
@@ -896,7 +895,7 @@ footer p {
     font-size: 13px;
   }
   footer {
-    height: 90px;
+    height: 100%;
   }
   footer p {
     margin: 5px;
